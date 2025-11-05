@@ -1,0 +1,205 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+}
+
+/* 🌈 NỀN CHUYỂN MÀU ĐỘNG */
+body {
+  font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff, #ff9a9e, #fad0c4);
+  background-size: 600% 600%;
+  animation: waveMove 12s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+
+  
+}
+
+
+@keyframes waveMove {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 75%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 25%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* 💎 THẺ CARD CHÍNH */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+  padding: 60px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* ẢNH ĐẠI DIỆN */
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #66a6ff;
+  margin: 0 auto 20px;
+}
+
+/* TÊN */
+h1 {
+  color: #333;
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+}
+
+/* MÔ TẢ */
+.description {
+  font-size: 30px;
+  color: #2b3247;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.major {
+  font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+  color: #1060b1;
+  letter-spacing: 1px;
+}
+
+/* PHẦN THÔNG TIN CHUNG */
+.section {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+  font-size: 28px;
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+.section ul {
+  list-style: none;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.section ul li {
+  color: #444;
+  font-family: 'Be Vietnam Pro', 'Poppins', sans-serif;
+      font-size: 30px;
+  padding: 5px 0;
+}
+
+/* KỸ NĂNG (LOGO) */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skills img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* LIÊN HỆ */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.social img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card {
+    width: 100vw;         /* full chiều ngang */
+    height: 100vh;        /* full chiều cao màn hình */
+    border-radius: 0;     /* bỏ bo góc cho vừa khít */
+    padding: 20px;        /* giảm padding cho hợp lý */
+    margin: 0;
+    box-shadow: none;     /* bỏ đổ bóng để không viền trắng */
+    overflow-y: auto;     /* cuộn nội dung nếu vượt quá màn hình */
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .section ul {
+    font-size: 18px;
+  }
+
+  .skills img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social img {
+    width: 35px;
+    height: 35px;
+  }
+}
